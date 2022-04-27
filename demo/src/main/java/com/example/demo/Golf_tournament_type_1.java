@@ -1,7 +1,7 @@
 package com.example.demo;
 import javax.persistence.*;
 @Entity
-public class Golf_tournament_type_1 {
+public class Golf_tournament_type_1{
     @Id
     @GeneratedValue
     private int tournamentID;
