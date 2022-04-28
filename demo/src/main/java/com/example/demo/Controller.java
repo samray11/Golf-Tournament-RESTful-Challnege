@@ -32,33 +32,22 @@ public class Controller {
     public List<Golf_tournament_type_1> getDataType1(){
         return golfRepo.findAll();
     }
-     /*
+
     @RequestMapping(value ="/save")
-    public  Golf_tournament_type_1 saveGolf(@RequestBody Golf_tournament_type_1 golf_tournament_type_1) throws JsonProcessingException{
-        ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
-        String json = ow.writeValueAsString(golf_tournament_type_1);
-        System.out.println("-------------------------------"+json);
-        golfRepo.save(golf_tournament_type_1);
-        return golf_tournament_type_1;
-    }
-    */
-    @RequestMapping(value ="/save")
-    public String saveGolf(@RequestBody @Nullable Golf_tournament_type_1 golf_tournament_type_1,@Nullable Golf_tournament_type_2 golf_tournament_type_2 ) throws JsonProcessingException{
-        ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
-        if (golf_tournament_type_1.getTournamentID() > 0){
-            String json = ow.writeValueAsString(golf_tournament_type_1);
-            golfRepo.save(golf_tournament_type_1);
-            System.out.println(json);
-            return "saved...."+json;
-        }
-        else if(golf_tournament_type_2.getTournamentUUID() != null){
-            String json = ow.writeValueAsString(golf_tournament_type_2);
-            golfRepo2.save(golf_tournament_type_2);
-            System.out.println(json);
-            return "saved..."+json;
-        }
-        else{
-            return"No Data saved";
-        }
+    public String saveGolf(@RequestBody String data) throws JsonProcessingException{
+        ObjectMapper objectMapper = new ObjectMapper();
+       try{
+        Golf_tournament_type_1 golf1 = objectMapper.readValue(data, Golf_tournament_type_1.class);
+        golfRepo.save(golf1);
+        return "saved..."+data;
+       }catch(JsonProcessingException e){
+       }
+       try{
+        Golf_tournament_type_2 golf2 = objectMapper.readValue(data, Golf_tournament_type_2.class);
+        golfRepo2.save(golf2);
+        return "saved..."+data;
+       }catch(JsonProcessingException e){
+       }
+        return "No data saved to database";
     }
 }
