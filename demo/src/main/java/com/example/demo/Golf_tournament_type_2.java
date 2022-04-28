@@ -1,11 +1,13 @@
 package com.example.demo;
+
 import java.util.UUID;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+
 @Entity
-public class Golf_tournament_type_2{
+public class Golf_tournament_type_2 {
     @Id
     @GeneratedValue
     private UUID tournamentUUID;
@@ -25,76 +27,77 @@ public class Golf_tournament_type_2{
     private int playerCount;
 
     // get and set uuid
-    public UUID getTournamentUUID (){
+    public UUID getTournamentUUID() {
         return tournamentUUID;
     }
 
-    public void setTournamentUUID (UUID x){
+    public void setTournamentUUID(UUID x) {
         tournamentUUID = x;
     }
 
     // get and set golf course
-    public String getGolfCourse (){
+    public String getGolfCourse() {
         return golfCourse;
     }
 
-    public void setGolfCourse (String x){
+    public void setGolfCourse(String x) {
         golfCourse = x;
     }
 
     // get and set competition name
-    public String getCompetitionName (){
+    public String getCompetitionName() {
         return competitionName;
     }
 
-    public void setCompetitionName (String x){
+    public void setCompetitionName(String x) {
         competitionName = x;
     }
+
     // get and set host country
-    public String getHostCountry (){
+    public String getHostCountry() {
         return hostCountry;
     }
 
-    public void setHostCountry (String x){
+    public void setHostCountry(String x) {
         hostCountry = x;
     }
 
     // get and set epoch start
-    public String getEpochStart (){
+    public String getEpochStart() {
         return epochStart;
     }
 
-    public void setEpochStart(String x){
+    public void setEpochStart(String x) {
         epochStart = x;
     }
 
     // get and set epoch finish
 
-    public String getEpochFinish (){
+    public String getEpochFinish() {
         return epochFinish;
     }
 
-    public void setEpochFinish(String x){
+    public void setEpochFinish(String x) {
         epochFinish = x;
     }
 
     // get and set rounds
 
-    public int getRounds (){
+    public int getRounds() {
         return rounds;
     }
 
-    public void setRounds(int x){
+    public void setRounds(int x) {
         rounds = x;
     }
 
     // get and set player count
 
-    public int getPlayerCount(){
+    public int getPlayerCount() {
         return playerCount;
     }
 
-    public void setPlayerCount(int x){
+    public void setPlayerCount(int x) {
         playerCount = x;
     }
 }

@@ -1,7 +1,9 @@
 package com.example.demo;
+
 import javax.persistence.*;
+
 @Entity
-public class Golf_tournament_type_1{
+public class Golf_tournament_type_1 {
     @Id
     @GeneratedValue
     private int tournamentID;
@@ -21,71 +23,74 @@ public class Golf_tournament_type_1{
     private int roundCount;
 
     // get and set tournament ID
-    public void setTournamentID(int x){
+    public void setTournamentID(int x) {
         tournamentID = x;
     }
-    public int getTournamentID(){
+
+    public int getTournamentID() {
         return tournamentID;
     }
 
     // get and set tournament name
-    public void setTournamentName(String x){
+    public void setTournamentName(String x) {
         tournamentName = x;
-    } 
-    
-    public String getTournamentName(){
+    }
+
+    public String getTournamentName() {
         return tournamentName;
-    } 
-    
-    //get and set forecast
-    public void setForecast(String x){
+    }
+
+    // get and set forecast
+    public void setForecast(String x) {
         forecast = x;
-    }   
+    }
 
-    public String getForecast(){
+    public String getForecast() {
         return forecast;
-    } 
-    
-    //get and set course name
-    public void setCourseName(String x){
+    }
+
+    // get and set course name
+    public void setCourseName(String x) {
         courseName = x;
-    }   
+    }
 
-    public String getCourseName(){
+    public String getCourseName() {
         return courseName;
-    } 
+    }
 
-    //get and set country code
-    public void setCountryCode(String x){
+    // get and set country code
+    public void setCountryCode(String x) {
         countryCode = x;
-    }   
+    }
 
-    public String getCountryCode(){
+    public String getCountryCode() {
         return countryCode;
-    } 
+    }
 
-    //get and set start date
-    public void setStartDate(String x){
+    // get and set start date
+    public void setStartDate(String x) {
         startDate = x;
-    }   
+    }
 
-    public String getStartDate(){
+    public String getStartDate() {
         return startDate;
-    } 
-    //get and set end date
-    public void setEndDate(String x){
+    }
+
+    // get and set end date
+    public void setEndDate(String x) {
         endDate = x;
-    }   
+    }
 
-    public String getEndDate(){
+    public String getEndDate() {
         return endDate;
-    } 
-    //get and set round count
-    public void setRoundCount(int x){
-        roundCount = x;
-    }   
+    }
 
-    public int getRoundCount(){
+    // get and set round count
+    public void setRoundCount(int x) {
+        roundCount = x;
+    }
+
+    public int getRoundCount() {
         return roundCount;
-    } 
+    }
 }
