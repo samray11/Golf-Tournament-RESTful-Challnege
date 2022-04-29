@@ -9,10 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
 import java.util.List;
-
-import javax.annotation.Nullable;
 
 @RestController
 public class Controller {
@@ -36,6 +33,7 @@ public class Controller {
     @RequestMapping(value = "/save")
     public String saveGolf(@RequestBody String data) throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
+        System.out.println(data);
         try {
             Golf_tournament_type_1 golf1 = objectMapper.readValue(data, Golf_tournament_type_1.class);
             golfRepo.save(golf1);

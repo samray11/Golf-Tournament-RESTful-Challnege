@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "dec0263f-bbcc-4056-ace3-69c6dea8e563",
+		"name": "Golf Testing Outputs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "test1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"tournamentId\": \"174638\",\r\n\t\"tournamentName\": \"Women's Open Championship\",\r\n\t\"forecast\": \"fair\",\r\n\t\"courseName\": \"Sunnydale Golf Course\",\r\n\t\"countryCode\": \"GB\",\r\n\t\"startDate\": \"09/07/21\",\r\n\t\"endDate\": \"13/07/21\",\r\n\t\"roundCount\": \"4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/save",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"tournamentUUID\":\"87fc6650-e114-4179-9aef-6a9a13030f80\",\r\n    \t\"golfCourse\":\"Happy Days Golf Club\",\r\n    \t\"competitionName\":\"South West Invitational\",\r\n    \t\"hostCountry\":\"United States Of America\",\r\n    \t\"epochStart\":\"1638349200\",\r\n    \t\"epochFinish\":\"1638468000\",\r\n    \t\"rounds\":\"2\",\r\n    \t\"playerCount\":\"35\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/save",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tournamentId\": \"1\",\r\n    \"tournamentName\": \"Sam Rays Test\",\r\n    \"forecast\": \"sunny\",\r\n    \"courseName\": \"test course\",\r\n    \"countryCode\": \"GB\",\r\n    \"startDate\": \"1/1/2023\",\r\n    \"endDate\": \"1/2/2023\",\r\n    \"roundCount\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/save",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test4",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n\t\"tournamentUUID\":\"393e9b52-c794-11ec-9d64-0242ac120002\",\r\n    \t\"golfCourse\":\"Test Club\",\r\n    \t\"competitionName\":\"Test Invitational\",\r\n    \t\"hostCountry\":\"United Tests Of America\",\r\n    \t\"epochStart\":\"1234567890\",\r\n    \t\"epochFinish\":\"0987654321\",\r\n    \t\"rounds\":\"5\",\r\n    \t\"playerCount\":\"10\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/save",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"save"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

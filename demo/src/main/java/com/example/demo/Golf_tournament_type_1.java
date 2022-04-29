@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class Golf_tournament_type_1 {
     @Id
     @GeneratedValue
-    private int tournamentID;
+    private int tournamentId;
     @Column
     private String tournamentName;
     @Column
@@ -23,12 +23,12 @@ public class Golf_tournament_type_1 {
     private int roundCount;
 
     // get and set tournament ID
-    public void setTournamentID(int x) {
-        tournamentID = x;
+    public void setTournamentId(int x) {
+        tournamentId = x;
     }
 
-    public int getTournamentID() {
-        return tournamentID;
+    public int getTournamentId() {
+        return tournamentId;
     }
 
     // get and set tournament name
